@@ -1,0 +1,32 @@
+.container {
+	display: flex;
+}
+
+aside {
+	display: flex;
+  flex-direction: column;
+}
+
+main {
+  min-height: 200px;
+	margin: 10px;
+	background-color: green;
+	flex-grow: 1;
+}
+
+.element {
+	height: 200px;
+	background-color: red;
+	margin: 10px;
+}
+
+@media (max-width: 640px) {
+	aside {
+    flex-direction: row;
+    justify-content: space-between;
+	}
+
+  .container {
+    flex-direction: column-reverse;
+  }
+}
