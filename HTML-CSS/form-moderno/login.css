@@ -4,6 +4,11 @@
 	font-family: 'Ubuntu', sans-serif;
 }
 
+html {
+  background-color: #161717;
+  color: white;
+}
+
 .container {
   margin: auto;
 	display: flex;
@@ -98,7 +103,6 @@ form {
 }
 
 label {
-	/* width: 100%; */
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
@@ -110,13 +114,14 @@ label span {
 
 label input {
 	width: 90%;
-	background-color: #f3f3f4;
+	background-color: #212121;
 	border: none;
 	padding: 10px 20px;
 	border-radius: 10px;
 	outline: none;
 	font-size: 14pt;
   transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+  color: white;
 }
 
 .section-inputs label input {
@@ -125,9 +130,13 @@ label input {
 
 label input:hover,
 label input:focus {
-	background-color: white;
+	background-color: #454045;
 	border: solid 1px #f3f3f4;
-	box-shadow: 0 0 4px #c94ebe;
+	box-shadow: 0 0 4px #eb50ff4f;
+}
+
+label input::placeholder {
+  color: white;
 }
 
 .checkbox-label {
