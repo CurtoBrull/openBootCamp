@@ -1,0 +1,57 @@
+// Build-In Modules SASS
+@use 'sass:color';
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:selector';
+@use 'sass:string';
+
+// Strings
+@debug "hola";
+@debug string.index('hola', 'o');
+
+$string: "Javier";
+$newString: string.insert($string, ' Curto', 7);
+
+@debug $newString;
+@debug string.length($newString);
+@debug string.slice($newString, 8, );
+@debug string.to-lower-case($newString);
+
+// Math
+@debug math.$e;
+@debug math.$pi;
+
+@debug math.ceil(2.1);
+@debug math.floor(2.1);
+
+// math.clamp(min, number, max);
+// Si está dentro del rango entre min y max, devuelve number.
+// Si está por debajo del rango, devuelve min.
+// Si está por encima del rango, devuelve max.
+// Se pueden usar unidades como px o cm, mm, etc.
+@debug math.clamp(2.1, 1, 3);
+
+@debug math.max(2, 3, 4);
+@debug math.min(2, 3, 4);
+
+@debug math.round(32.7845);
+
+@debug math.pow(2, 3);
+
+// Listas
+
+$list: 1, 2, 4, 5, 3;
+
+@debug $list;
+@debug list.length($list);
+@debug list.nth($list, 2);
+@debug list.append($list, 6, space);
+@debug list.index($list, 3);
+
+// Selectores
+
+$selector-1: "a";
+$selector-2: ".disabled";
+
+@debug selector.append($selector-1, $selector-2);

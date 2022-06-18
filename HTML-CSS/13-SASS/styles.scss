@@ -1,0 +1,15 @@
+// Mixins
+@use './sass/mixins';
+
+// Componentes
+// Se puede cambiar el nombre del archivo con "as comp" por ejemplo
+@use './sass/componentes';
+
+// Estilos
+@use './sass/estilos';
+
+// Variables
+@use './sass/variables';
+
+// Build-In Modules
+@use './sass/builtin';

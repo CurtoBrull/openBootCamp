@@ -1,0 +1,22 @@
+// Build-In Modules SASS
+@use 'sass:color';
+
+.btn {
+	border: none;
+	padding: 0.5rem;
+	color: #2b2b2b;
+
+	&:hover {
+		background-color: #3f3f3f;
+		color: #aaa;
+	}
+}
+
+.btn-2 {
+	// Copiar Estilos de otros elementos
+	@extend .btn;
+
+	margin-top: 5px;
+  // color.scale
+	border: 2px solid color.scale(#2b2b2b, $lightness: 50%);
+}

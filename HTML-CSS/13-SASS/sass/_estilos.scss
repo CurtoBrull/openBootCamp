@@ -1,0 +1,59 @@
+@use 'mixins';
+@use 'variables' as var;
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 0.5rem;
+}
+
+h1 {
+	margin: 0;
+	@include mixins.formato-texto(var.$textColor, var.$bgColor);
+}
+
+p {
+	@include mixins.formato-texto(white, #666666);
+}
+
+span {
+	@include mixins.formato-texto();
+}
+
+// Anidación de selectores
+.listado {
+	margin-top: 5px;
+	width: 10rem;
+	background-color: aquamarine;
+	padding: 0.5rem;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			padding: 0.5rem;
+			background-color: #666666;
+			color: white;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			text-align: center;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #3f3f3f;
+			}
+		}
+	}
+}

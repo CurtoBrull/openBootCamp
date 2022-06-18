@@ -1,0 +1,129 @@
+@use 'variables' as var;
+
+@mixin btn-base {
+	padding: 0.25rem 1.5rem;
+	border-radius: 0.25rem;
+}
+
+@mixin btn-small-modifier {
+	font-size: 0.75rem;
+	padding: 0.1rem 1rem;
+}
+
+.btn-main {
+	@include btn-base;
+	background-color: var.$color-main;
+	color: white;
+	border: solid 1px var.$color-main;
+
+	&:hover {
+		background-color: white;
+		color: var.$color-main;
+	}
+
+	&-small {
+		@extend .btn-main;
+		@include btn-small-modifier();
+	}
+}
+
+.btn-secondary {
+	@include btn-base;
+	color: black;
+	background-color: transparent;
+	border: none;
+
+	&:hover {
+		color: #888;
+	}
+
+	&-small {
+		@extend .btn-secondary;
+		@include btn-small-modifier();
+	}
+}
+
+.main-menu {
+
+  margin-bottom: 0;
+
+	li {
+    margin-right: 2rem;
+		list-style: none;
+		display: inline;
+		font-size: 0.85rem;
+
+    a {
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+	}
+}
+
+.icon-small {
+	i {
+    font-size: 1rem;
+		padding: 0.4rem 0.65rem;
+		border-radius: 50%;
+		border: 1px solid #ccc;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		color: var.$color-main;
+	}
+}
+
+.benefit {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: baseline;
+
+	i {
+		color: var.$color-main;
+		font-size: 4.5rem;
+		text-align: center;
+	}
+
+	.description {
+		.title {
+			font-size: 2rem;
+			text-align: center;
+      min-height: 5rem;
+		}
+    
+		.text {
+      color: #888;
+			font-weight: 600;
+			text-align: center;
+      min-height: 6rem;
+		}
+	}
+
+	.cta {
+		color: var.$color-main;
+		font-weight: 600;
+		text-align: center;
+	}
+}
+
+.icon-desc {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	i {
+		color: var.$color-main;
+		font-size: 10rem;
+		padding: 0;
+	}
+
+	.title {
+		margin-top: -1rem;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+}

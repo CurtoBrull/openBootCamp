@@ -1,0 +1,9 @@
+// Mixin para reutilizar código (puede contener atributos)
+@mixin formato-texto($text-color: rgb(177, 199, 51), $bg-color: rgb(90, 90, 168)) {
+	color: $text-color;
+	background-color: $bg-color;
+	color: $text-color;
+	text-transform: uppercase;
+	width: 50rem;
+	background-color: $bg-color;
+}
