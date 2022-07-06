@@ -28,3 +28,18 @@ function saludarPersona(obj) {
 
 console.log(saludarPersona(persona));
 
+// Propagacion en parametros
+
+function imprimir(...parametros) {
+	console.log(parametros)
+}
+
+imprimir(1,2,3,4,5,6, 'hola', { id: 5})
+
+function suma(...nums) {
+	return nums.reduce((a, b) => a + b);
+}
+
+const sum = suma(1,2,31,43);
+
+console.log(sum);
